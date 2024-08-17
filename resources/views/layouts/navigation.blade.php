@@ -16,6 +16,18 @@
                         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                             {{ __('Dashboard') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('dashboard.pemilik')" :active="request()->routeIs('dashboard.pemilik')">
+                            {{ __('Data Pemilik') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('dashboard.akta')" :active="request()->routeIs('dashboard.akta')">
+                            {{ __('Data Akta Tanah') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('dashboard.import')" :active="request()->routeIs('dashboard.import')">
+                            {{ __('Import Data') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('dashboard.users')" :active="request()->routeIs('dashboard.users')">
+                            {{ __('User') }}
+                        </x-nav-link>
                     </div>
                 </div>
 
@@ -68,6 +80,18 @@
             <div class="pt-2 pb-3 space-y-1">
                 <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                     {{ __('Dashboard') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('dashboard.pemilik')" :active="request()->routeIs('dashboard.pemilik')">
+                    {{ __('Data Pemilik') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('dashboard.akta')" :active="request()->routeIs('dashboard.akta')">
+                    {{ __('Data Akta Tanah') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('dashboard.import')" :active="request()->routeIs('dashboard.import')">
+                    {{ __('Import Data') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('dashboard.users')" :active="request()->routeIs('dashboard.users')">
+                    {{ __('User') }}
                 </x-responsive-nav-link>
             </div>
 

@@ -1,1 +1,1 @@
-<h1 class="text-2xl font-semibold">BPKA</h1>
+<img src="{{ url('/') }}/assets/logo-bpka.png" class="h-10" alt="">
