@@ -183,7 +183,6 @@
                                         $currentPemilikId = null;
                                         $no = 1;
                                     @endphp
-                                    <x-splade-lazy>
                                     @foreach ($data as $lahan)
                                         <tr class="hover:bg-gray-50" style="white-space: nowrap;">
                                             @if ($currentPemilikId !== $lahan->pemilik_id)
@@ -232,7 +231,6 @@
                                             $currentPemilikId = $lahan->pemilik_id;
                                         @endphp
                                     @endforeach
-                                    </x-splade-lazy>
                                 </tbody>
                             </table>
                         </div>
