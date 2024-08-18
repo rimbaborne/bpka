@@ -20,6 +20,17 @@ use App\Exports\AktaExport;
 
 class DashboardController extends Controller
 {
+    public function dashboard() {
+        $data = [
+            'pemilik' => Pemilik::count(),
+            'akta' => Lahan::count(),
+            'akta-pemilik' => Lahan::where('keterangan', 'PEMILIK')->count(),
+            'akta-limpahan' => Lahan::where('keterangan', 'LIMPAHAN')->count(),
+            'akta-dilimpahkan' => Lahan::where('keterangan', 'DILIMPAHKAN')->count(),
+        ];
+
+        return view('dashboard', compact('data'));
+    }
     public function data_pemilik() {
         $data = TablePemilik::class;
         return view('pages.pemilik.index', compact('data'));
@@ -188,7 +199,6 @@ class DashboardController extends Controller
         $date = date('Ymd');
         return Excel::download(new AktaExport($filters), "data_akta_$date.xlsx");
     }
-
 
     public function import_data() {
         return view('pages.import');

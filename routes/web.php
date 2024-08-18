@@ -34,9 +34,9 @@ Route::middleware('splade')->group(function () {
     });
 
     Route::middleware('auth')->group(function () {
-        Route::get('/dashboard', function () {
-            return view('dashboard');
-        })->middleware(['verified'])->name('dashboard');
+        // Route::get('/dashboard', function () {
+        //
+        // })->middleware(['verified'])->name('dashboard');
 
         // Route::get('/dashboard', function () {
         //     return view('dashboard');
@@ -57,6 +57,7 @@ Route::middleware('splade')->group(function () {
         //dashboard controller
 
         Route::group(['prefix' => 'dashboard'], function () {
+            Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
             Route::get('/pemilik', [DashboardController::class, 'data_pemilik'])->name('dashboard.pemilik');
             Route::get('/pemilik/create', [DashboardController::class, 'data_pemilik_create'])->name('dashboard.pemilik.create');
             Route::post('/pemilik/store', [DashboardController::class, 'data_pemilik_store'])->name('dashboard.pemilik.store');

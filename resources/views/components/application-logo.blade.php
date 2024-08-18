@@ -1,1 +1,1 @@
-<img src="{{ url('/') }}/assets/logo-bpka.png" class="h-10" alt="">
+<img src="{{ url('/') }}/assets/logo-bpka.png" class="w-24" alt="">

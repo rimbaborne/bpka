@@ -23,7 +23,7 @@
                 </svg>
 
                 <span :class="{ 'opacity-50': form.processing || form.$uploading }">
-                    {{ $label }}
+                    {{ $label }} <i class="ml-2 fas fa-save text-md">
                 </span>
             </div>
         @endif
