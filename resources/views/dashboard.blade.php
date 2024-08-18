@@ -10,7 +10,6 @@
                 <div class="bg-white rounded-md p-6 border col-span-full sm:col-span-2">
                     <div class="flex items-center space-x-4">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-user text-4xl text-gray-500"></i>
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-base font-semibold text-gray-900 truncate dark:text-white">
@@ -30,7 +29,6 @@
                 <div class="bg-white rounded-md p-6 border col-span-full sm:col-span-2">
                     <div class="flex items-center space-x-4">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-file-contract text-4xl text-gray-500"></i>
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-base font-semibold text-gray-900 truncate dark:text-white">
@@ -52,7 +50,6 @@
                 <div class="bg-white rounded-md p-6 border col-span-full sm:col-span-2">
                     <div class="flex items-center space-x-4">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-address-book text-4xl text-gray-500"></i>
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-base font-semibold text-gray-900 truncate dark:text-white">
@@ -72,7 +69,6 @@
                 <div class="bg-white rounded-md p-6 border col-span-full sm:col-span-2">
                     <div class="flex items-center space-x-4">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-box-archive text-4xl text-gray-500"></i>
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-base font-semibold text-gray-900 truncate dark:text-white">
@@ -92,7 +88,6 @@
                 <div class="bg-white rounded-md p-6 border col-span-full sm:col-span-2">
                     <div class="flex items-center space-x-4">
                         <div class="flex-shrink-0">
-                            <i class="fas fa-boxes-packing text-4xl text-gray-500"></i>
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-base font-semibold text-gray-900 truncate dark:text-white">

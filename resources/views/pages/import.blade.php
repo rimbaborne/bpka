@@ -11,7 +11,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div class="flex justify-center mb-8">
                         <a href="{{ url('/') }}/assets/contoh-data-import-bpka.xlsx" class="border border-indigo-500 hover:bg-indigo-600 font-bold py-2.5 px-4 rounded-md mr-2">
-                            Download Contoh Data <i class="ml-2 fas fa-file-excel text-md">
+                            Download Contoh Data
                         </a>
                     </div>
                     <x-splade-form action="{{ route('dashboard.import.store') }}" method="POST" enctype="multipart/form-data"  confirm>

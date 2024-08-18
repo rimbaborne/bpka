@@ -94,7 +94,6 @@
                                 </div>
                                 <button type="submit" class="my-4 px-10 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 flex items-center justify-between">
                                     <span>Cari </span>
-                                    <i class="ml-4 fas fa-search text-md"></i>
                                 </button>
                             </form>
                             <form action="{{ route('dashboard.akta.export') }}" method="GET" class="my-4 flex items-right justify-end" onsubmit="return confirm('Konfirmasi permintaan export data')">
@@ -105,7 +104,7 @@
                                 <input type="hidden" name="nomor_notaris" value="{{ request('nomor_notaris') }}">
                                 <input type="hidden" name="keterangan" value="{{ request('keterangan') }}">
                                 <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded flex items-center justify-between">
-                                    <span>Export Excel </span> <i class="ml-4 fas fa-file-excel text-md"></i>
+                                    <span>Export Excel </span>
                                 </button>
                             </form>
                         </div>
@@ -225,7 +224,7 @@
                                             <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->terima }}</div></td>
                                             <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer">
                                                 <div class="flex flex-row items-center justify-start">
-                                                    <Link modal href="{{ route('dashboard.akta.show', ['id' => $lahan->pemilik_id, 'notaris' => $lahan->id]) }}" class="text-indigo-500 hover:text-indigo-700 border border-indigo-500 py-1 px-4 rounded-md">Edit <i class="ml-2 fas fa-pencil text-md"></i></Link>
+                                                    <Link modal href="{{ route('dashboard.akta.show', ['id' => $lahan->pemilik_id, 'notaris' => $lahan->id]) }}" class="text-indigo-500 hover:text-indigo-700 border border-indigo-500 py-1 px-4 rounded-md">Edit </Link>
                                                 </div>
                                             </td>
                                         </tr>

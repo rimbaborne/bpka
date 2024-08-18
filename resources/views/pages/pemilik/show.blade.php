@@ -38,7 +38,7 @@
                     confirm-button="Ya, saya yakin menghapusnya !"
                     cancel-button="Batalkan !"
 
-                    >Hapus  <i class="ml-2 fas fa-trash text-md"></Link>
+                    >Hapus  </Link>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
             <div class="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
                 <div class="flex justify-end mb-4">
                     <Link modal href="{{ route('dashboard.akta.create', ['id' => $data->id]) }}" class=" hover:text-indigo-700 text-white bg-indigo-500 hover:bg-white hover:border hover:border-indigo-500 py-2.5 px-4 my-1 rounded-md">
-                        Tambah Data Akta <i class="ml-2 fas fa-plus-circle text-md">
+                        Tambah Data Akta
                     </Link>
                 </div>
                 <h3 class="text-xl font-semibold dark:text-white">Memiliki Akta </h3>
@@ -75,13 +75,13 @@
                                 <td class="border px-4 py-2">{{ $lahan->keterangan }}</td>
                                 <td class="border px-4 py-2">{{ $lahan->terima }}</td>
                                 <td class="border px-4 py-2 text-center">
-                                    <Link modal href="{{ route('dashboard.akta.show', ['id' => $data->id, 'notaris' => $lahan->id]) }}" class="text-indigo-500 hover:text-indigo-700 border border-indigo-500 py-1 px-4 my-1 rounded-md">Edit  <i class="ml-2 fas fa-pencil text-md"></Link>
+                                    <Link modal href="{{ route('dashboard.akta.show', ['id' => $data->id, 'notaris' => $lahan->id]) }}" class="text-indigo-500 hover:text-indigo-700 border border-indigo-500 py-1 px-4 my-1 rounded-md">Edit </Link>
                                     <Link method="delete" href="{{ route('dashboard.akta.destroy', ['id' => $data->id, 'notaris' => $lahan->id]) }}" class="text-red-500 hover:text-red-700 border border-red-500 py-1 px-4 mx-1 rounded-md"
                                         confirmDanger="Yakin Di Hapus ?"
                                         confirm-text="Data tidak akan kembali"
                                         confirm-button="Ya, saya yakin menghapusnya !"
                                         cancel-button="Batalkan !"
-                                        >Hapus  <i class="ml-2 fas fa-trash text-md"></Link>
+                                        >Hapus </Link>
                                 </td>
                             </tr>
                         @endforeach
