@@ -23,13 +23,32 @@ class RolesTableSeeder extends Seeder
         $humasRole = Role::create(['name' => 'humas']);
 
         // Membuat User Admin
-        $adminUser = User::create([
-            'name' => 'Admin User',
-            'email' => 'admin@admin.com',
-            'password' => bcrypt('qweqweqwe'), // Ganti dengan password yang diinginkan
-        ]);
+        $user1 = User::create(
+            [
+            'name' => 'Admin Ari',
+            'email' => 'arin@berlian-bpka.com',
+            'password' => bcrypt('17agustus'), // Ganti dengan password yang diinginkan
+            ]
+        );
+        $user2 = User::create(
+            [
+                'name' => 'Admin Dedy',
+                'email' => 'dedy@berlian-bpka.com',
+                'password' => bcrypt('17agustus'), // Ganti dengan password yang diinginkan
+            ],
+        );
+        $user3 = User::create(
+            [
+                'name' => 'Bos',
+                'email' => 'bos@berlian-bpka.com',
+                'password' => bcrypt('17agustus'), // Ganti dengan password yang diinginkan
+            ],
+        );
+
 
         // Assign role admin ke user
-        $adminUser->assignRole($superadminRole);
+        $user1->assignRole($superadminRole);
+        $user2->assignRole($superadminRole);
+        $user3->assignRole($superadminRole);
     }
 }
