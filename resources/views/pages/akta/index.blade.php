@@ -213,11 +213,10 @@
                                                 @foreach($lahan->pemilik->lahan as $lahan)
                                                     @php
                                                         $totalLuasTanah += $lahan->luas_tanah;
-                                                        $jumlahSurat += $lahan->jumlah;
                                                     @endphp
                                                 @endforeach
                                                 <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $totalLuasTanah }}</div></td>
-                                                <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $jumlahSurat }}</div></td>
+                                                <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->pemilik->lahan->count() }}</div></td>
                                                 <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->pemilik->alamat }}</div></td>
                                                 <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->pemilik->nik }}</div></td>
                                                 <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->pemilik->nomor_telepon }}</div></td>

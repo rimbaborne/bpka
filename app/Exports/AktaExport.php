@@ -67,7 +67,6 @@ class AktaExport implements FromArray, WithHeadings,  WithStyles,  ShouldAutoSiz
         foreach ($lahans->groupBy('pemilik_id') as $pemilikId => $groupedLahans) {
             $pemilik = $groupedLahans->first()->pemilik;
             $luasTanahSum = $groupedLahans->sum('luas_tanah');
-            $jumlahSuratSum = $groupedLahans->sum('jumlah');
 
             // Tampilkan pemilik dan akumulasi luas tanah hanya satu kali
             foreach ($groupedLahans as $index => $lahan) {
@@ -78,7 +77,7 @@ class AktaExport implements FromArray, WithHeadings,  WithStyles,  ShouldAutoSiz
                         $pemilik->humas,
                         $pemilik->nama,
                         $luasTanahSum,
-                        $jumlahSuratSum,
+                        $groupedLahans->count(),
                         $pemilik->alamat,
                         $pemilik->nik,
                         $pemilik->nomor_telepon,
