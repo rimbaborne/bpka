@@ -54,7 +54,7 @@ class DashboardController extends Controller
             $now  = now()->format('Y-m-d');
             $path = 'public/ktp/' . $now . '/';
             $file = request()->file('file_ktp');
-            $name = Str::slug(request('nama') . '-' . request('ibu_kandung'));
+            $name = Str::slug(request('nama') . '-' . request('ibu_kandung')) . '.' . $file->getClientOriginalExtension();
             $file->storeAs($path, $name, 'public');
             $data->ktp = $path . $name;
         }
@@ -82,7 +82,7 @@ class DashboardController extends Controller
             $now  = now()->format('Y-m-d');
             $path = 'public/ktp/' . $now . '/';
             $file = request()->file('file_ktp');
-            $name = Str::slug(request('nama') . '-' . request('ibu_kandung'));
+            $name = Str::slug(request('nama') . '-' . request('ibu_kandung')) . '.' . $file->getClientOriginalExtension();
             $file->storeAs($path, $name, 'public');
             $data->ktp = $path . $name;
         }
