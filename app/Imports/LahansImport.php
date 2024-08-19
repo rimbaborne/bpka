@@ -44,11 +44,12 @@ class LahansImport implements ToModel, WithHeadingRow
                 $satuan = preg_replace('/[^0-9]/', '', $row['satuan']);
                 return new Lahan([
                     'nomor_notaris'   => $nomorNotaris,
-                    'tanggal_notaris' => \PhpOffice\PhpSpreadsheet\Shared\Date::isDateTime($row['tanggal_notaris'])
-                        ? Carbon\Carbon::instance(\PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row['tanggal_notaris']))->format('Y-m-d')
-                        : $row['tanggal_notaris'],
-                    'luas_tanah'      => $satuan,
-                    'jumlah'          => $row['jumlah'] ?? '',
+                    // 'tanggal_notaris' => \PhpOffice\PhpSpreadsheet\Shared\Date::isDateTime($row['tanggal_notaris'])
+                    //     ? Carbon\Carbon::instance(\PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row['tanggal_notaris']))->format('Y-m-d')
+                    //     : $row['tanggal_notaris'],
+                    'tanggal_notaris' => $row['tanggal_notaris'],
+                    'luas_tanah'      => $satuan ?? 2,
+                    'jumlah'          => $row['jumlah'] ?? 1,
                     'keterangan'      => Str::upper($row['keterangan']) ?? '',
                     'terima'          => $row['terima'] ?? '',
                     'pemilik_id'      => $pemilik->id,
