@@ -226,6 +226,7 @@
                                                 <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"></td>
                                                 <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"></td>
                                                 <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"></td>
+                                                <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"></td>
                                             @endif
                                             <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->nomor_notaris }}</div></td>
                                             <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->tanggal_notaris }}</div></td>
