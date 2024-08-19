@@ -67,6 +67,7 @@ class AktaExport implements FromArray, WithHeadings,  WithStyles,  ShouldAutoSiz
         foreach ($lahans->groupBy('pemilik_id') as $pemilikId => $groupedLahans) {
             $pemilik = $groupedLahans->first()->pemilik;
             $luasTanahSum = $groupedLahans->sum('luas_tanah');
+            $jumlahSuratSum = $groupedLahans->sum('jumlah');
 
             // Tampilkan pemilik dan akumulasi luas tanah hanya satu kali
             foreach ($groupedLahans as $index => $lahan) {
@@ -74,9 +75,10 @@ class AktaExport implements FromArray, WithHeadings,  WithStyles,  ShouldAutoSiz
                     // Baris pertama untuk pemilik
                     $data[] = [
                         $no++,
+                        $pemilik->humas,
                         $pemilik->nama,
                         $luasTanahSum,
-                        $groupedLahans->count(),
+                        $jumlahSuratSum,
                         $pemilik->alamat,
                         $pemilik->nik,
                         $pemilik->nomor_telepon,
@@ -84,7 +86,8 @@ class AktaExport implements FromArray, WithHeadings,  WithStyles,  ShouldAutoSiz
                         $lahan->nomor_notaris,
                         $lahan->tanggal_notaris,
                         $lahan->keterangan,
-                        $lahan->terima
+                        $lahan->terima,
+                        $lahan->catatan
                     ];
                 } else {
                     // Baris berikutnya, hanya tampilkan lahan
@@ -97,10 +100,13 @@ class AktaExport implements FromArray, WithHeadings,  WithStyles,  ShouldAutoSiz
                         null,
                         null,
                         null,
+                        null,
                         $lahan->nomor_notaris,
                         $lahan->tanggal_notaris,
                         $lahan->keterangan,
-                        $lahan->terima
+                        $lahan->terima,
+                        $lahan->catatan
+
                     ];
                 }
             }
@@ -113,6 +119,7 @@ class AktaExport implements FromArray, WithHeadings,  WithStyles,  ShouldAutoSiz
     {
         return [
             'No',
+            'Humas',
             'Nama Pemilik',
             'Luas Ha',
             'Surat',
@@ -123,7 +130,8 @@ class AktaExport implements FromArray, WithHeadings,  WithStyles,  ShouldAutoSiz
             'Versil',
             'Tanggal',
             'Keterangan',
-            'Terima'
+            'Terima',
+            'Catatan'
         ];
     }
 
