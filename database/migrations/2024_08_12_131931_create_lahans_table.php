@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('jumlah')->nullable();
             $table->string('keterangan')->nullable();
             $table->string('terima')->nullable();
+            $table->string('catatan')->nullable();
             $table->foreignId('pemilik_id')->constrained()->onDelete('cascade');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();

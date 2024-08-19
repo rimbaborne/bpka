@@ -32,31 +32,26 @@ class LahansImport implements ToModel, WithHeadingRow
                 'ibu_kandung'   => $row['ibu_kandung'] ?? '',
                 'nomor_telepon' => $row['nomor_telepon'] ?? '',
                 'keterangan'    => $row['keterangan'] ?? '',
-                'humas'         => $row['humas'] ?? 'admin',
+                'humas'         => Str::upper($row['humas']) ?? 'ADMIN',
                 'user_id'       => $this->userId,              // User yang bertanggung jawab
             ]
         );
 
-        $nomorNotaris = $row['no_notaris'] ?? '';
-        if ($nomorNotaris) {
-            $lahans = Lahan::where('nomor_notaris', $nomorNotaris)->get();
-            if ($lahans->isEmpty()) {
-                $satuan = preg_replace('/[^0-9]/', '', $row['satuan']);
-                return new Lahan([
-                    'nomor_notaris'   => $nomorNotaris,
-                    // 'tanggal_notaris' => \PhpOffice\PhpSpreadsheet\Shared\Date::isDateTime($row['tanggal_notaris'])
-                    //     ? Carbon\Carbon::instance(\PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row['tanggal_notaris']))->format('Y-m-d')
-                    //     : $row['tanggal_notaris'],
-                    'tanggal_notaris' => $row['tanggal_notaris'],
-                    'luas_tanah'      => $satuan ?? 2,
-                    'jumlah'          => $row['jumlah'] ?? 1,
-                    'keterangan'      => Str::upper($row['keterangan']) ?? '',
-                    'terima'          => $row['terima'] ?? '',
-                    'pemilik_id'      => $pemilik->id,
-                    'user_id'         => $this->userId,             // User yang bertanggung jawab
-                ]);
-            }
-        }
+        $cekdata = Lahan::where('nomor_notaris', $row['nomor_notaris'])->first();
+        $catatan = null;
+        if($cekdata) { $catatan = 'Versil sudah dimiliki oleh '.$cekdata->pemilik->nama; }
+        $satuan = preg_replace('/[^0-9]/', '', $row['satuan']);
+        return new Lahan([
+            'nomor_notaris'   => $row['nomor_notaris'],
+            'tanggal_notaris' => $row['tanggal_notaris'] ?? '',
+            'luas_tanah'      => $satuan ?? 2,
+            'jumlah'          => $row['jumlah'] ?? 1,
+            'keterangan'      => Str::upper($row['keterangan']) ?? '',
+            'terima'          => $row['terima'] ?? '',
+            'pemilik_id'      => $pemilik->id,
+            'user_id'         => $this->userId,             // User yang bertanggung jawab
+            'catatan'         => $catatan ?? '',             // User yang bertanggung jawab
+        ]);
     }
 }
 

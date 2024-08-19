@@ -9,6 +9,7 @@
                                 'jumlah'          => $data->jumlah,
                                 'keterangan'      => $data->keterangan,
                                 'terima'          => $data->terima == null ? 'Kota Balikpapan' : $data->terima,
+                                'catatan'      => $data->catatan,
                             ]"
                     >
             <x-splade-input class="col-span-full sm:col-span-2" name="nomor_notaris" label="Nomor Notaris" />
@@ -27,6 +28,8 @@
                     @endforeach
                 @endforeach
             </x-splade-select>
+            <x-splade-input class="col-span-full sm:col-span-2" name="catatan" label="Catatan" type="text" />
+
 
             <x-splade-submit class="col-span-full sm:col-span-full" label="Simpan" />
         </x-splade-form>

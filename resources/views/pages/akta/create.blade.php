@@ -24,6 +24,8 @@
                     @endforeach
                 @endforeach
             </x-splade-select>
+            <x-splade-input class="col-span-full sm:col-span-2" name="catatan" label="Catatan" type="text" />
+
 
             <x-splade-submit class="col-span-full sm:col-span-full" label="Simpan" />
         </x-splade-form>

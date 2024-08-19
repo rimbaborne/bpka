@@ -75,6 +75,7 @@
                                 <td class="border px-4 py-2">{{ $lahan->jumlah }}</td>
                                 <td class="border px-4 py-2">{{ $lahan->keterangan }}</td>
                                 <td class="border px-4 py-2">{{ $lahan->terima }}</td>
+                                <td class="border px-4 py-2">{{ $lahan->catatan }}</td>
                                 <td class="border px-4 py-2 text-center">
                                     <Link modal href="{{ route('dashboard.akta.show', ['id' => $data->id, 'notaris' => $lahan->id]) }}" class="text-indigo-500 hover:text-indigo-700 border border-indigo-500 py-1 px-4 my-1 rounded-md">Edit </Link>
                                     <Link method="delete" href="{{ route('dashboard.akta.destroy', ['id' => $data->id, 'notaris' => $lahan->id]) }}" class="text-red-500 hover:text-red-700 border border-red-500 py-1 px-4 mx-1 rounded-md"

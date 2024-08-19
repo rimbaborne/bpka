@@ -180,6 +180,11 @@
                                                 Terima
                                             </span>
                                         </th>
+                                        <th class="px-4 py-3 text-left text-xs font-semibold tracking-wide text-gray-700">
+                                            <span class="flex flex-row items-center justify-start uppercase">
+                                                Catatan
+                                            </span>
+                                        </th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -232,6 +237,7 @@
                                             <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->tanggal_notaris }}</div></td>
                                             <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->keterangan }}</div></td>
                                             <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->terima }}</div></td>
+                                            <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $lahan->catatan }}</div></td>
                                             <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer">
                                                 <div class="flex flex-row items-center justify-start">
                                                     <Link modal href="{{ route('dashboard.akta.show', ['id' => $lahan->pemilik_id, 'notaris' => $lahan->id]) }}" class="text-indigo-500 hover:text-indigo-700 border border-indigo-500 py-1 px-4 rounded-md">Edit </Link>

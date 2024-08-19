@@ -17,7 +17,8 @@ class Lahan extends Model
         'keterangan',
         'terima',
         'pemilik_id',
-        'user_id'
+        'user_id',
+        'catatan'
     ];
 
     public function pemilik()

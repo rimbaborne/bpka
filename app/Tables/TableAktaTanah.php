@@ -65,6 +65,10 @@ class TableAktaTanah extends AbstractTable
                 key: 'keterangan',
                 label: 'Cari Keterangan ..',
             )
+            ->searchInput(
+                key: 'catatan',
+                label: 'Cari Catatan ..',
+            )
             ->column(
                 key     : 'pemilik.nama',
                 label   : 'Nama'
@@ -104,6 +108,10 @@ class TableAktaTanah extends AbstractTable
             ->column(
                 key     : 'terima',
                 label   : 'Terima'
+            )
+            ->column(
+                key     : 'catatan',
+                label   : 'Catatan'
             )
 
             // ->searchInput()
