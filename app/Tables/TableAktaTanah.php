@@ -48,7 +48,11 @@ class TableAktaTanah extends AbstractTable
     public function configure(SpladeTable $table)
     {
         $table
-            ->withGlobalSearch(columns: ['nomor_notaris'])
+            ->withGlobalSearch(columns: ['nomor_notaris', 'pemilik.nama'])
+            ->searchInput(
+                key: 'pemilik.humas',
+                label: 'Cari Humas ..',
+            )
             ->searchInput(
                 key: 'pemilik.nama',
                 label: 'Cari Nama ..',

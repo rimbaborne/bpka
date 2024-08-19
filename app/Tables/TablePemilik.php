@@ -48,8 +48,36 @@ class TablePemilik extends AbstractTable
     public function configure(SpladeTable $table)
     {
         $table
-            ->withGlobalSearch(columns: ['nama', 'alamat', 'nik', 'ibu_kandung', 'nomor_telepon'])
+            ->withGlobalSearch(columns: ['nama', 'alamat', 'nik', 'ibu_kandung', 'nomor_telepon', 'humas'])
             ->rowLink(fn (Pemilik $pemilik) => route('dashboard.pemilik.show', ['id' => $pemilik->id]))
+            ->searchInput(
+                key: 'nama',
+                label: 'Cari Nama',
+            )
+            ->searchInput(
+                key: 'alamat',
+                label: 'Cari Alamat',
+            )
+            ->searchInput(
+                key: 'nik',
+                label: 'Cari NIK',
+            )
+            ->searchInput(
+                key: 'ibu_kandung',
+                label: 'Cari Ibu Kandung',
+            )
+            ->searchInput(
+                key: 'nomor_telepon',
+                label: 'Cari Nomor Telepon',
+            )
+            ->searchInput(
+                key: 'humas',
+                label: 'Cari Humas',
+            )
+            ->column(
+                key     : 'humas',
+                label   : 'Humas'
+            )
             ->column(
                 key     : 'nama',
                 label   : 'Nama'

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('pemiliks', function (Blueprint $table) {
             $table->id();
+            $table->string('humas')->nullable();
             $table->string('nik')->nullable();
             $table->string('nama')->nullable();
             $table->text('alamat')->nullable();

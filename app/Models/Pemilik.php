@@ -12,6 +12,7 @@ class Pemilik extends Model
 
     protected $fillable = [
         'nama',
+        'humas',
         'nik',
         'alamat',
         'ibu_kandung',
