@@ -122,6 +122,11 @@
                                         </th>
                                         <th class="px-4 py-3 text-left text-xs font-semibold tracking-wide text-gray-700">
                                             <span class="flex flex-row items-center justify-start uppercase">
+                                                Humas
+                                            </span>
+                                        </th>
+                                        <th class="px-4 py-3 text-left text-xs font-semibold tracking-wide text-gray-700">
+                                            <span class="flex flex-row items-center justify-start uppercase">
                                                 Nama
                                             </span>
                                         </th>
@@ -187,6 +192,11 @@
                                         <tr class="hover:bg-gray-50" style="white-space: nowrap;">
                                             @if ($currentPemilikId !== $lahan->pemilik_id)
                                                 <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer"><div class="flex flex-row items-center justify-start">{{ $no++ }}</div></td>
+                                                <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer">
+                                                    <div class="flex flex-row items-center justify-start">
+                                                        <Link href="{{ route('dashboard.pemilik.show', ['id' => $lahan->pemilik_id]) }}"> {{ $lahan->pemilik->humas }} </Link>
+                                                    </div>
+                                                </td>
                                                 <td class="whitespace-nowrap text-sm px-4 py-2 text-gray-500 cursor-pointer">
                                                     <div class="flex flex-row items-center justify-start">
                                                         <Link href="{{ route('dashboard.pemilik.show', ['id' => $lahan->pemilik_id]) }}"> {{ $lahan->pemilik->nama }} </Link>

@@ -43,6 +43,7 @@ class DashboardController extends Controller
 
     public function data_pemilik_update($id) {
         $data                = Pemilik::find($id);
+        $data->humas         = request('humas');
         $data->nama          = request('nama');
         $data->nik           = request('nik');
         $data->ibu_kandung   = request('ibu_kandung');
@@ -69,6 +70,7 @@ class DashboardController extends Controller
 
     public function data_pemilik_store() {
         $data                = New Pemilik;
+        $data->humas         = request('humas');
         $data->nama          = request('nama');
         $data->nik           = request('nik');
         $data->ibu_kandung   = request('ibu_kandung');

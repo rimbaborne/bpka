@@ -70,7 +70,7 @@
     "isDynamicEntry": true
   },
   "node_modules/filepond/dist/filepond.esm.js": {
-    "file": "assets/filepond.esm-BKI_Kz2Z.js",
+    "file": "assets/filepond.esm-I8730GRX.js",
     "name": "filepond.esm",
     "src": "node_modules/filepond/dist/filepond.esm.js",
     "isDynamicEntry": true
@@ -82,7 +82,7 @@
     "isDynamicEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-BGvBAUIW.js",
+    "file": "assets/app-AI6Yqm-W.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -103,7 +103,7 @@
       "node_modules/@protonemedia/laravel-splade/dist/CompilerErrorMessages-6b34f14b.js"
     ],
     "css": [
-      "assets/app-Bro2tPQH.css"
+      "assets/app-Cu6Vw0TE.css"
     ]
   }
 }

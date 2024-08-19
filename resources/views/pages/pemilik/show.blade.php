@@ -10,6 +10,7 @@
             <div class="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
                 <h3 class="mb-4 text-xl font-semibold dark:text-white">Lihat Data</h3>
                 <x-splade-form :default="$data" action="{{ route('dashboard.pemilik.update', ['id' => $data->id]) }}"  class="grid grid-cols-4 gap-4">
+                    <x-splade-input class="col-span-full sm:col-span-2" name="humas" label="Humas" />
                     <x-splade-input class="col-span-full sm:col-span-2" name="nama" label="Nama" />
                     <x-splade-input class="col-span-full sm:col-span-2" name="nik" label="NIK" />
                     <x-splade-input class="col-span-full sm:col-span-2" name="ibu_kandung" label="Ibu Kandung" />
